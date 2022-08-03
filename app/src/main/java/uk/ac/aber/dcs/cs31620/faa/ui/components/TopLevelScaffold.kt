@@ -14,19 +14,10 @@ fun TopLevelScaffold(
     pageContent: @Composable (innerPadding: PaddingValues) -> Unit = {}
 ) {
     val scaffoldState = rememberScaffoldState()
-    val coroutineScope = rememberCoroutineScope()
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = {
-            MainPageTopAppBar(onClick = {
-                coroutineScope.launch {
-                    if (scaffoldState.drawerState.isOpen){
-                        scaffoldState.drawerState.close()
-                    } else {
-                        scaffoldState.drawerState.open()
-                    }
-                }
-            })
+            MainPageTopAppBar()
         },
         bottomBar = {
             MainPageNavigationBar(navController)
