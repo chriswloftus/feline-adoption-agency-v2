@@ -26,7 +26,12 @@ import uk.ac.aber.dcs.cs31620.faa.ui.cats.CatsScreen
 import uk.ac.aber.dcs.cs31620.faa.ui.navigation.Screen
 import uk.ac.aber.dcs.cs31620.faa.ui.navigation.screens
 import uk.ac.aber.dcs.cs31620.faa.ui.theme.FAATheme
-
+/**
+ * Creates the navigation bar displayed at the bottom of the screen.
+ * Currently has just two items: the Home item and the Cats item.
+ * @param navController To pass through the NavHostController since navigation is required
+ * @author Chris Loftus
+ */
 @Composable
 fun MainPageNavigationBar(
     navController: NavController,

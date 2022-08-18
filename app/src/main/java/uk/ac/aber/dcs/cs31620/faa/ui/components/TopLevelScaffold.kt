@@ -7,7 +7,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.launch
-
+/**
+ * Creates the page scaffold to contain top app bar,
+ * bottom navigation button and of course the page content.
+ * @param navController To pass through the NavHostController since navigation is required
+ * @param pageContent So that callers can plug in their own page content.
+ * By default an empty lambda.
+ * @author Chris Loftus
+ */
 @Composable
 fun TopLevelScaffold(
     navController: NavHostController,
